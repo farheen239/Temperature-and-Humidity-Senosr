@@ -1,0 +1,25 @@
+#include <LiquidCrystal.h>
+
+// LCD pins: RS, E, D4, D5, D6, D7
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
+
+int sensorPin = A1; // Simulated sensor
+
+void setup() {
+  lcd.begin(16, 2);
+}
+
+void loop() {
+  int value = analogRead(sensorPin);
+
+  int temp = map(value, 0, 1023, 20, 35); // Simulate temperature
+  int hum  = map(value, 0, 1023, 40, 80); // Simulate humidity
+
+  lcd.setCursor(0, 0);
+  lcd.print("Temp: "); lcd.print(temp); lcd.print("C");
+
+  lcd.setCursor(0, 1);
+  lcd.print("Hum: "); lcd.print(hum); lcd.print("%");
+
+  delay(2000);
+}
