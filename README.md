@@ -1,0 +1,1 @@
+A **temperature and humidity sensor project using Arduino** typically uses the **DHT11 or DHT22 sensor**. The sensor measures the surrounding **temperature and humidity** and sends the data to the Arduino. The Arduino reads this data and can display it on a **serial monitor** or **LCD screen**. It’s commonly used in weather stations, smart homes, and greenhouse monitoring.
